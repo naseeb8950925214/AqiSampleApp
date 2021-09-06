@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aqiFragment">
+
+    <fragment
+        android:id="@+id/aqiFragment"
+        android:name="com.example.aqiapp.ui.main.fragment.AqiFragment"
+        android:label="fragment_aqi"
+        tools:layout="@layout/fragment_aqi" >
+        <action
+            android:id="@+id/action_aqiFragment_to_graphFragment"
+            app:destination="@id/graphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="com.example.aqiapp.ui.main.fragment.GraphFragment"
+        android:label="GraphFragment" >
+        <argument
+            android:name="selectedCityName"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:id="@+id/top_layout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/cityValueTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/currentAQIValueTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/city" />
+
+    <TextView
+        android:id="@+id/currentAQIValueTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/lastUpdatedTV"
+        app:layout_constraintStart_toEndOf="@id/cityValueTV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/current_aqi" />
+
+    <TextView
+        android:id="@+id/lastUpdatedTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/currentAQIValueTV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/last_updated" />
+</androidx.constraintlayout.widget.ConstraintLayout>
